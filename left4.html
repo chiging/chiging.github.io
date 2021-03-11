@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body {background-color:#fff2f3;}
+</style>
+<title>琦君研究中心</title>
+<script language="JavaScript" type="text/javascript">
+	function $(_0){
+		return document.getElementById(_0);
+	}
+	function popmenu(tableName,obj){
+	    if ($(tableName).style.display=="none"){		
+			$(tableName).style.display="block";
+			$(obj).getElementsByTagName("img")[0].src = "images/open.gif";
+
+		}else{
+			$(tableName).style.display="none";	
+			$(obj).getElementsByTagName("img")[0].src = "images/close.gif";
+		}
+	}	
+</script>
+</head>
+
+<body>
+<div class="item">
+<ol><li><a href="index4-1.html" target="_top">學位論文</a></li>
+    <li><a href="index4-2.html" target="_top">專書作家論、文學史資料</a></li>
+    <li><a href="index4-6.html" target="_top">專論/論文集</a></li>
+    <li><a href="javascript:popmenu('DetailItem1','item1');"  id="item1">
+    <img src="images/close.gif" border="0">期刊類</a></li></ol></div>
+<div class="detailItem"  id="DetailItem1" style="display:none;">
+<ul><li><a href="index4-3-1.html" target="_top">1979年以前</a></li>
+    <li><a href="index4-3-2.html" target="_top">1980-1989年</a></li>
+    <li><a href="index4-3-3.html" target="_top">1990-1999年</a></li>
+    <li><a href="index4-3-4.html" target="_top">2000-2009年</a></li>
+    <li><a href="index4-3-5.html" target="_top">2010年後</a></li></ul></div>
+<div class="item">
+<ol><li><a href="index4-4.html"target="_top">訪談</a></li>
+    <li><a href="javascript:popmenu('DetailItem2','item2');"  id="item2">
+    <img src="images/close.gif" border="0">報導</a></li></ol></div>
+<div class="detailItem"  id="DetailItem2" style="display:none;">
+<ul><li><a href="index4-5-1.html" target="_top">自美返台及活動情形報導</a></li>
+    <li><a href="index4-5-2.html" target="_top">琦君研究中心成立暨琦君及其同輩女作家學術研討會報導</a></li>
+    <li><a href="index4-5-3.html" target="_top">琦君辭世相關報導</a></li></ul></div>
+</div>
+</body></html>

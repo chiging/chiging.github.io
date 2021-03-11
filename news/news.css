@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+body{margin:0;padding:0;font-size:13px;line-height:19px;color: #333;font-family: Arial, Helvetica, sans-serif, 新細明體;background-color:#fff;}
+img{border:0;}
+
+
+.main5{width:730px;float:left;padding:15px 10px 15px 50px;line-height:23px;border-left: 1px solid #fce4e6;background-color:#fff;}
+.main5_item{height:30px;text-align: center;}
+.main5_item ol{margin:0;}
+.main5_item li{padding:5px 10px;color:#fff;display:inline;list-style-type: none;margin:0 3px;background-color: #ff4e00;}
+.main5_item li A{color:#fff;text-decoration:none;}
+.main5_item li A:hover{text-decoration: underline;}
+.main5 h1{font-size:15px;margin:0 0 30px -20px;border-left: solid 5px #f13c69;padding:0 0 0 10px;color:#4f202a;}
+.main5 h2{font-size:15px;margin:20px 0 20px -20px;border-bottom: dashed 1px #CCC;color:#2c2b41;}
+.main5 h3{font-size:13px;margin:20px 0 0 -15px;font-weight: normal;color: #36F;}
+.main5 h4{font-size:13px;margin:0 0 0 -15px;font-weight: normal;float:left;}
+.main5 h5{font-size:13px;margin:0 5px 0 0;font-weight: normal;float:left;}
+.main5 h6{font-size:13px;margin:0 0 0 70px;font-weight: normal;}
+
+
+.form4_news,.form5{background-color:#fcd4d7;margin:20px auto 50px;line-height:19px;}
+.form4_news th,.form5 th{background-color:#ffe4e6;padding:5px;color:#e1386f;}
+.form4_news td,.form5 td{background-color:#fff;padding:3px 5px;}
+
+.form4_news ul{margin:0 0 0 -20px;}
+.form4_news li{padding:0;margin:0 0 10px -20px;border-bottom: 1px dashed #fcd4d7;list-style-type: none;}
+.form4_news{width:80%;background-color:#fcd4d7;margin:20px auto 50px;line-height:19px;}
+.form4_news th{background-color:#ffe4e6;padding:5px;color:#e1386f;}
+.form4_news td{background-color:#fff;padding:3px 5px;}
+.main_news A,.form4_news li A,.form4_news A,.form4_news {color:#c2476f;text-decoration: none;}
+.main_news A:visited,.form4_news li A:visited,{color:#003088;text-decoration: none;}
+.main_news A:hover,.form4_news li A:hover,.form4_news A:hover{color:#e15f00;text-decoration: underline;}
+
+.form5{width:70%;margin:20px 0 50px;}
+.form5 td{text-align: center;}
+.g_b h3{color:#702a00;font-size:13px;margin:5px 0;font-weight:bold;}
+.main5 img{margin:0 auto 10px;}

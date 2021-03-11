@@ -1,0 +1,122 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="news/news.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="fancybox.css" />
+<link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+</head>
+<body>
+<div class="main5">
+<h1>琦君追思會照片記錄</h1>
+<div id="content">
+<table width="315" border="0" align="center" cellpadding="5">
+<tr><td><div class="gallery__item"><a href="images/news/news13.jpg" class="gallery__link"><img src="images/news/news13.jpg" class="gallery__img"/></a></div></td>
+    <td><div class="gallery__item"><a href="images/news/news14.jpg" class="gallery__link"><img src="images/news/news14.jpg" class="gallery__img"/></a></div></td>
+    <td><div class="gallery__item"><a href="images/news/news15.jpg" class="gallery__link"><img src="images/news/news15.jpg" class="gallery__img"/></a></div></td></tr>
+<tr><td><div class="gallery__item"><a href="images/news/news16.jpg" class="gallery__link"><img src="images/news/news16.jpg" class="gallery__img"/></a></div></td>
+    <td><div class="gallery__item"><a href="images/news/news17.jpg" class="gallery__link"><img src="images/news/news17.jpg" class="gallery__img"/></a></div></td>
+    <td><div class="gallery__item"><a href="images/news/news18.jpg" class="gallery__link"><img src="images/news/news18.jpg" class="gallery__img"/></a></div></td></tr>
+<tr><td><div class="gallery__item"><a href="images/news/news19.jpg" class="gallery__link"><img src="images/news/news19.jpg" class="gallery__img"/></a></div></td>
+    <td><div class="gallery__item"><a href="images/news/news20.jpg" class="gallery__link"><img src="images/news/news20.jpg" class="gallery__img"/></a></div></td>
+    <td><div class="gallery__item"><a href="images/news/news21.jpg" class="gallery__link"><img src="images/news/news21.jpg" class="gallery__img"/></a></div></td></tr>
+<tr><td><div class="gallery__item"><a href="images/news/news22.jpg" class="gallery__link"><img src="images/news/news22.jpg" class="gallery__img"/></a></div></td>
+    <td><div class="gallery__item"><a href="images/news/news23.jpg" class="gallery__link"><img src="images/news/news23.jpg" class="gallery__img"/></a></div></td>
+    <td><div class="gallery__item"><a href="images/news/news24.jpg" class="gallery__link"><img src="images/news/news24.jpg" class="gallery__img"/></a></div></td></tr>
+<tr><td><div class="gallery__item"><a href="images/news/news25.jpg" class="gallery__link"><img src="images/news/news25.jpg" class="gallery__img"/></a></div></td>
+    <td><div class="gallery__item"><a href="images/news/news26.jpg" class="gallery__link"><img src="images/news/news26.jpg" class="gallery__img"/></a></div></td>
+    <td></td></tr></table>
+
+</div> <!-- #content -->
+</div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    // Only run everything once the page has completely loaded
+    $(window).load(function(){
+
+        // Set general variables
+        // ====================================================================
+        var totalWidth = 0;
+
+        // Total width is calculated by looping through each gallery item and
+        // adding up each width and storing that in `totalWidth`
+        $(".gallery__item").each(function(){
+            totalWidth = totalWidth + $(this).outerWidth(true);
+        });
+
+        // The maxScrollPosition is the furthest point the items should
+        // ever scroll to. We always want the viewport to be full of images.
+        var maxScrollPosition = totalWidth - $(".gallery-wrap").outerWidth();
+
+        // This is the core function that animates to the target item
+        // ====================================================================
+        function toGalleryItem($targetItem){
+            // Make sure the target item exists, otherwise do nothing
+            if($targetItem.length){
+
+                // The new position is just to the left of the targetItem
+                var newPosition = $targetItem.position().left;
+
+                // If the new position isn't greater than the maximum width
+                if(newPosition <= maxScrollPosition){
+
+                    // Add active class to the target item
+                    $targetItem.addClass("gallery__item--active");
+
+                    // Remove the Active class from all other items
+                    $targetItem.siblings().removeClass("gallery__item--active");
+
+                    // Animate .gallery element to the correct left position.
+                    $(".gallery").animate({
+                        left : - newPosition
+                    });
+                } else {
+                    // Animate .gallery element to the correct left position.
+                    $(".gallery").animate({
+                        left : - maxScrollPosition
+                    });
+                };
+            };
+        };
+
+        // Basic HTML manipulation
+        // ====================================================================
+        // Set the gallery width to the totalWidth. This allows all items to
+        // be on one line.
+        $(".gallery").width(totalWidth);
+
+        // Add active class to the first gallery item
+        $(".gallery__item:first").addClass("gallery__item--active");
+
+        // When the prev button is clicked
+        // ====================================================================
+        $(".gallery__controls-prev").click(function(){
+            // Set target item to the item before the active item
+            var $targetItem = $(".gallery__item--active").prev();
+            toGalleryItem($targetItem);
+        });
+
+        // When the next button is clicked
+        // ====================================================================
+        $(".gallery__controls-next").click(function(){
+            // Set target item to the item after the active item
+            var $targetItem = $(".gallery__item--active").next();
+            toGalleryItem($targetItem);
+        });
+    });
+    </script>
+
+    <script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.1.js"></script>
+    <script type="text/javascript">
+    // Fancybox specific
+    // To make images pretty. Not important
+    $(document).ready(function(){
+        $(".gallery__link").fancybox({
+            'titleShow'     : false,
+            'transitionIn'  : 'elastic',
+            'transitionOut' : 'elastic'
+        });
+    });
+    </script>
+</body>

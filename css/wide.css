@@ -1,0 +1,7 @@
+
+#page-wrap { width: 988px; position: relative; }
+
+#main-content { float:right; width: 790px; height:610px;}
+#secondary-one { width: 180px; height:400px; position: absolute;float:left; }
+#secondary-two { width:988px; height: 60px; }
+

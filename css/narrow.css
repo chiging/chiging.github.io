@@ -1,0 +1,7 @@
+body { background: #333; }
+#page-wrap { width: 548px; }
+#page-wrap:after { content: "Narrow Layout"; }
+#secondary-two { display: none; }
+
+
+#secondary-one { float: left; width:150px; height:30px; }
